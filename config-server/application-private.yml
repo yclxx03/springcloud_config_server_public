@@ -1,0 +1,15 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          ## 私库，https，需要帐号密码
+          uri: https://github.com/yanppp999/springcloud_config_server_private.git    # 配置git仓库的地址
+          search-paths: config-repo                                                # git仓库地址下的相对地址，可以配置多个，用,分割。
+          ## 改成自己的帐号和密码
+          username: zss                                            # github账号
+          password: 123                                             # github密码

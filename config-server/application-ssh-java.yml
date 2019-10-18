@@ -1,0 +1,70 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          ## 私库，ssh，需要ssh private-key
+          uri: git@github.com:yanppp999/springcloud_config_server_private.git
+          search-paths: config-repo
+          label: master
+          ignore-local-ssh-settings: true
+          private-key: |
+                        -----BEGIN RSA PRIVATE KEY-----
+                        MIIJKQIBAAKCAgEAwzenWqkcbKAomVGk6tdNs8MjLJXnbLrKgI9U5yWc3HkyJedt
+                        YXuprxui9iDYqVIwg0BM/nD/fnsDPiHwLtIb5Y7EwmDEhYNI7DaM8zOM2UwT6JhB
+                        k6vhOT1t2VwScsADvecFw+ynQnZXtCbMulNC5iKSZXf/faY2qz6eshKNwpU9+ygg
+                        5l0cyLUOfXFrshGM8n6PHWBS0sJDYs+JZyPUsOteLGy+FVKZzs/sWhKCLfTzy9dD
+                        2ZHFOkTLyKTFd3gl/TBoj9T0pUOrtETGw5J3nq/hdTuUscLVJA77PDsgEx5A74cE
+                        rpLZwUbZs0kRjM4wgsC12osU0YUuvVNpcGfMDDM0GBfOuaSI0L/T6cJPTTAE5db2
+                        anclNjaGGuG9JiD9PNGjhTxXIyy9DkgQ/IOqo92kbk+HG8hY9MORk6hb7xpXNARG
+                        ImW6oXlvEj5MpCP0Znpl3TuO/p2mfzZNytIFquV5r8HZ7Tk07UQW7pzJitlPLxGv
+                        fqLIpcpjF394Kgp2WTG+gHX7bgg+OeHK0Q9iyg6tD0eFiskNM9QS+cN72vUT+5FS
+                        f+cEtvf1mHSLwaNgD4FSZXIaPtpuhcpJQL1D1+uDi+Y4LiEWR8zBcRtt48Xwy1tn
+                        5/CeEPP6dSNZrxRjoI22vXhdz4QoJ9pE+wyHm3RUM09pgEeJYEqYW/c8FncCAwEA
+                        AQKCAgBIoWkrauW/aGsSd/TSxt4K9pwcl30tz+VNpYYiJbVRtem5fnwMm9TK6I5d
+                        4mSZwpF4E7FRrTrxlNTlBf11fgiRBOghpZ0YS3sTH0ybo19Q7WQu0o77YSR/hmJb
+                        T00x0kzSF6TmeyLTsHH6/cCHxjiKpOwwwk+VMQT/+2FRwWNqtNoFmq1658OwzOQi
+                        OdOmwa7d/cZDWLYX4dzuY2assAEO/dLg1mh2SHAfKO63qFE0xgD6oxGEXh6yCiyD
+                        bwJk65e+tocAlGudHStB+6Cz3MeSi79nPY6aAHIKY2SHyTuqwUPJmkNcrBhGN5UB
+                        hjr4VzJnQ0mlkL9jIJj+KY1+G7AnZzvMPm8i4I2LdvaOvGnPjThueirskYY8dcvu
+                        TU5STRpTSkVTw7Whv3SKVYme/BYecvuRJIry/z81ZuYnse6yIK1pYDqdn5WjqHfk
+                        z58hfjdongW+Ks6sInqyF3LQMxbmyrcgMyh+27/EfCREI7oX8KodKVsuz881xe1z
+                        S9WCpEGOuU3Mn+CYOXg6RH+uuLKHy/cLdTf81PsP35F6/kzEwQBuqkTGhkkmHoE1
+                        xFZKF/Ojo+IaJWaHrbUUbXcH2wB6ClSr/E1DfQUZZ8aQEXuQ7oyGvIKE6g0WSsTn
+                        8u4oaq0OYBXqlPRWJayaFraqpOV+aItfxA8qavvJkEvy0rAnKQKCAQEA7J8ssFwG
+                        TSG2W08yum1xiwnLW+rvGBjxm4MJyoxKTxL5bsC1TF53waupFT0SNlqFMAoDAGmf
+                        DKGKOANwP47daJa/jsUk8ADx4dF3uPwnjh2FSXlcD/jEKNKBgVfANCR2oTRqpEsT
+                        K0Dpp2O9iOotkL/K9a5fn201ncyVRNjKqeEtb3q98W7mSv1xH1e0pvKE0tz56/QB
+                        C8GyXB+ytbiY3AHKrx+BBlRr6eeRW83xjWuLwYwHKEskLnfquzwi5HzhAPoFrOQQ
+                        lhiAu+62d+snmo8NiF5lmiht8riiiQP6Pi8/CLo06f/eCVmhpQmE/jy8Lo+FAMoz
+                        5ZpHxxlKqX6KDQKCAQEA0zRteaj3nCWD0chSawUKeF7LtcBv3rrQ5PayoKY2IQJF
+                        RRU/6Pw8CDyZ9K8Zj8Vzzc3HkErxWExUMP6WkBL7a/q+1qms+2W4zzEygCZCDJB+
+                        zKHqtk2IdpVOKPzj/dHQTwBli1RZu1GMXTQzsSWYs1M48U0Ee19Txcno+GrJua0W
+                        kAValHPrUp6ImjJRj55d7CBNgRPCEUn8IjX2SU5EFa2KFlVMZFyMR3CEYHs5EFym
+                        MPVEf0jPI3owki4veXZ08xjVfhhd+8mlH5XTR5hA/hrT1IPMZHx/4wngNiFNOQHA
+                        7xkVghV3gDdnBbHggB9ZoPyl/22Z3U6UWZFohg7VkwKCAQA6rnsJvbi+VjcATBLb
+                        kxrOjX5GbGwhQMZid8vs1H/1PlJnuhj8OI1glW7YWo3ytt5C/Kij6I3ONx2tKIUk
+                        7gxQzNny0UeI0eMqyqTzVm2E3CNbBmLjfyE+sn31ksqS49wbvIEZ/5hgaLfJkH3H
+                        v7PPKxFtfnIueooKeVsneNBB8xsug3UptAQe4t20FS8zG//+v1inwJqlzMKsABx0
+                        3rPiE/utFJYN+M/OcWRmLRvTo7FELbL0tjXh5FFtX8uTeLjgYiEYMHNAlhEPCnNs
+                        KABpX0LO6AIwighCYrHEYx0jYNo0EuHeilsJXJYu9L5rwqo0rdkhSgQ2090rLkWK
+                        5VvdAoIBAQC7Q3T9te81p52lV7Sb5zBNYd/FGwcVuRaWrJXdEwJTaiv5AMpVza98
+                        rh7jcI19iFkRVS9opMowvBy6BEGDJRF/wCeNNYyGqr6eFsTsEv/lHAkRb08orL4e
+                        Rmuys+eCmZHVOkjOrM+S4s9NpIdgvjESbuvCJ8Odj/w7FrdV63lJBEtJDzYtAkrY
+                        SnBcJ9lhOc2VG18c32Pm6G6B9s6UWKzNe70/6Al/wv8uKHl3AkqqUzuXlSBSqz/d
+                        +O0v73twerNfB9njn79VDIk35CQdCsY1h5vihamoPys1JwCBfi12KjPiy57iZB48
+                        tOLHjdu8Pg++ScT1ITyXmKC4edDvbB+5AoIBAQCCqVpPfQSpz5JjV2HH08ie+JNj
+                        Brn9Tlx7IIPi2UkFnuslgadRQt5ZnAe/QBmglv0swEk4fuy5CqWuVQT6KvQQF9OW
+                        sjov9woJ4VYi/LVIVCbH0j+Q/8dXkLqCrqT28VlgOYict7tjQoxfTrTHPqgLJPfz
+                        be7xrHEbRMvpaoT84FpvqEZS4/qxvQ/Ck5CIKi4tFkS1k8jInBtWuhFTkTG4ou/T
+                        1nBZIgJXpIw9WQZsJlI+h4Z2z+fkDzdrotAgNYoEyIBNWnDTvnoFfrJgFNFR5VM+
+                        GwOy01xi1h5vrAddMeV8mrLOEdewlQdw6mHM30cx40Uao6ydk8z/3j4nWo6y
+                        -----END RSA PRIVATE KEY-----
+
+
+
+
